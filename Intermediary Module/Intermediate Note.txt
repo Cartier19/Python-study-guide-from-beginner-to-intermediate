@@ -1,0 +1,216 @@
+### PHASE 2
+In this phase, we will be looking at python collection types, lambda functions, generators, decorators, OOP, and much more.
+
+## Collection types.
+# Dictionaries
+Python provides a number of built-in collection types, to store multiple values. Lists are one of these collection types, and they allow you to store indexed values.
+Dictionaries are another collection type and allow you to map arbitrary keys to values. They can be indexed in the same way as lists, using square brackets containing keys.
+Each element in a dictionary is represented by a key:value pair.
+Only immutable objects can be used as keys to dictionaries.
+*Immutable data types*
+- Bool- Boolean value
+- Int- Integer value
+- Float- Floating point number
+- Tuple- Sequence of objects of immutable nature
+- Str- Character/string
+- Frozenset- set class of immutable nature
+
+*Mutable data types*
+- List- Sequence of objects of mutable nature
+- Set- set of distinct e that are of unordered nature.
+- Dict- dictionary or associative mapping
+
+# Dictionary Functions
+To determine whether a key is in a dictionary, you can use in and not in, just as you can for a list.
+A useful dictionary function is get. It does the same thing as indexing, but if the key is not found in the dictionary it returns another specified value instead.
+
+# Tuples
+Tuples are very similar to lists, except that they are immutable. Also they are created using Parentheses rather than square brackets.
+You can access the values in a tuple with their index. Trying to reassign a value in a tuple causes an error. Tuples can also be nested within each other.
+Tuples can be created without the parentheses by just separating the values with commas.
+# Tuple Unpacking
+Tuple Unpacking allows you to assign each item in a collection to a variable.
+This can also be used to swap variables by doing a, b = b, a. A variable that is prefaced with an asterisk takes all values from the collection that are left over from the other variables.
+
+# Sets
+Sets are similar to lists or dictionaries. They are created by using curly braces and are unordered, which means they can't be indexed.
+Due to the way they are stored, it's faster to check whether an item is part of a set using the in operator, rather than part of a list.
+Sets caannot contain duplicate elements. You can use the add() function to add new items to the set and remove() to delete a specific element.
+They can be combined using mathematical operations:
+- The union operator | combines two sets to form a new one containing items in either
+- The intersection operator & gets items only in both
+- The difference operator - gets item in the first set but not in the second
+- The symmetric difference operator ^ gets items in either but not both
+
+# List comprehension
+It is a useful way of quickly creating lists whose contents obey a rule.They are inspired by set builder notations in mathematics. 
+A list comprehension can also contain an if statement to enforce a condition on values in the list.
+
+
+## Functional Programming
+Functional programming is a style of programming that is based around functions.
+A key part of functional progar is higher-order functions. Higher-order functions take other functions and return them as results.
+
+# Pure functions
+Functional programming seeks to use pure functions. Pure functions have no side effect, and return a value that depends only on their arguments.
+This is how functions in maths work. Pure functions are:
+- easier to reason about and test
+- more efficient. enables memoization
+- easier to run in parallel.
+
+# Lambdas
+Creating a function normally(using def) assigns it to a variable with its name automatically.
+Python allows us to create functions on-the-fly, provided that they are created using lambda syntax.
+print((lambda arg : expression)(value))
+This approach is mostly used when passing a simple function as an argument to another function. Functions created using the lambda syntax are known as anonymous.
+Lambdas functions aren't as powerful as named functions. They can only do things that require a single expression(a single line of code)
+
+# Map & Filter.
+The built-in function map & filter are very useful higher-order functions that operate on lists(or similar objects can be used as keys to dictionaries.
+classes are created using the keyword class and an indented block, which contains class methods lled iterables).
+The function map takes a function and an iterable as arguments, and returns a new iterable with the function applied to each argument.
+The function filter filters an iterable by leaving only the items that match a condition(also called a predicate)
+
+# Generators
+Generators are a type of iterable, like lists or tuples. They don't allow indexing with arbitrary indices, but they can still be iterated through with for loops.
+They can be created by using functions and the yield statement.
+
+# Decorators
+Decorators are a way to modify functions using other functions.This is ideal when you need to extend the functionality of functions that you don't want to modify.
+Python provides support to wrap a function in a decorator by pre-pending the function definition with a decorator name and the @ symbol.
+A single function can have multiple decorators.
+
+# Recursion
+Recursion is a very important part of functional programming. The fundamental part of recursion is self-reference -- functions calling themselves.
+It is used to solve problems that can  be broken up into easier sub problems of the same type.
+A classic example of a function that is implemented recursively is the factorial function, which finds the product of all positive integers below a specified number.
+The base case acts as the exit condition of the recursion. Not adding a base case results in infinite function calls, crashing the program
+Recursion can also be indirect. One function can call a second which calls the first, which calls the second and so on. It can occur with any number of functions
+
+# *args & **kwargs
+Python allows you to have function with varying numbers of arguments.
+Using *args as a function parameter enables you pass an arbitrary number of argument to that function.
+The arguments are then accessible as the tuple args in the body of the function.
+**kwargs stands for keyboard arguments. It allows you to handle named arguments that you have not defied in advance.
+The keyword argument returns a dictionary in which the keys are the argument names, and the values are the argument values.
+
+
+### OOP(Object Oriented Programming).
+The focal point of Object Oriented Programming(OOP) are objects, which are created using classes.
+The class describes what the object will be but is separate from the object itself. In other words, a class is described as an object's blueprint or definition.
+You can use the same class as a blueprint for creating multiple different objects.
+Classes are created using the keyword class and an indented block, which contains class methods(which are functions).
+The __init__ method is the most important method in a class. This is called when an instance(object) of the class is created, using the class name as a function.
+All methods must have self as their first parameter, although it isn't explicitly passed.Python adds the self argument to the list for you.
+Instances of a class have attributes, which are pieces of data attached to them. The __init__ method is called a class constructor.
+Classes can have other methods defined to add functionality to them.
+
+# Inheritance
+Inheritance provides a way to share functionality between classes. A superclass which contains the shared functionality, is created where all other classes can inherit from.
+To inherit a class from another class, put the superclass name in parentheses after the class name.
+A class that inherits from another class is called a superclass.
+The function super is a useful inheritance-related function that refers to the parent class. It can be used to find the method with a certain name in an object's superclass.
+
+# Magic methods & Operator overloading
+Magic methods are special methods which have double underscores at the beginning and end of their names.
+They are also known as dunders. They are used to create functionality that can't be represented as a normal method.
+One common use of them is the operator overloading. Magic methods are the methods that define operator overloading.
+This means defining operators for custom classes that allow + and * to be used on them.
+Python also provides magic methods for comparisons.
+__lt__ for <
+__le__ for <=
+__eq__ for ==
+__ne__ for !=
+__gt__ for >
+__ge__ for >=
+if __ne__ is not implemented, it returns the opposite of __eq__.
+There are several magic methods for making classes act like containers.
+__len__ for len()
+__getitem__ for indexing
+__setitem__ for for assigning to indexed values
+__delitem__ for deleting indexed values
+__iter__ for iteration over objects
+__contains__ for in
+
+# Data Hiding
+A key part of object-oriented programming is enscapulation, which involves packaging of related variables and functions into a single easy-to-use object -- an instance of a class.
+A related concept if data hiding, which states that implementation details of a class should be hidden, and a clean standard interface be presented for those who want to use the class.
+In other programming languages, this is usually done with private methods and attributes, which block external access to certain methods and attributes in a class.
+Weakly private methods and attributes have a single underscore at the beginning. This signals that they are private and shouldn't be used for external code.
+Strongly private methods and attributes have a double underscore at the beginning. This causes their names to be mangled, which means that they can't be accessed from outside the class.
+The purpose of this isn't to ensure that they are kept private but to avoid bugs if there are subclasses that have methods or attributes with the same name.
+Basically, python protects those members by interally changing the name to include the class name.
+
+# Class & Static methods
+Class methods are called by a class, which is passed to the cls parameter of the method.
+They are marked with a classmethod decorator.
+Static methods are similar to class method, but they don't receive any additional arguments: they are identical to normal functions thaat belong to a class.
+They are marked with the staticmethod decorator.
+
+# Properties
+Properties are a way of customizing access to instance attributes. 
+They are created by putting the property decorator above a method, which means when the instance attribute with the same name as the method is accessed, the method will be called instead.
+They can also be set by using getter/setter functions.
+The setter function sets the corresponding property value. The getter gets the value.
+To define a setter, you need to use a decorator of the same name as the property, followed by a dot and the setter keyword.(Same applies to defining getter functions)
+
+
+### Exceptions
+These occur when something goes wrong, due to incorrect code or input. When an exception occurs, the code stops immediately.
+Common exceptions include:
+-ImportError: an import fails
+-IndexError: a list is indexed with an out-of-range number
+-NameError: an unknown variable is used
+-SytaxError: the code can't be parsed properly
+-TypeError: a function is called on a value of inappropriate type
+-ValueError: a function is called on a value of the correct type, but with an inappropriate value.
+
+# Exception Handling
+To handle exceptions and to call code when an exception occurs, you can use a try/except statement.
+The try block contains code that might throw an exception.
+If that exception occurs, the code in the try block stops being excecuted and the code in the except block is run.
+If no error occurs, the code in the except block doesn't run.
+A try statement can have multiple diffeent except blocks to handle different exceptions.
+An except statement without any exception specified will catch all errors. These should be used sparingly as they can catch unexpected errors and hide programming mistakes.
+
+# finally, else statement
+After a try statement, a finally block can follow.
+It will execute after the try/except block, no matter if an exception occurs or not.
+The finally block is useful for example, when working with files and resources: it can be used to make sure files or resources are closed or released regardless of whether an an exception occurs.
+The else statement can also be used with try/except statements.
+in this case, the code is only excecuted if no error occurs in the try statement
+
+# Raising exceptions
+You can throw or raise exceptions when some conditions occur.
+For example when you take a user inptu that needs to be in a specific format, you can throw an exception when it does not meet the requirements.
+This is done using the raise statement.
+Exceptions can be raised with arguments that give detail about them.
+
+
+### Working with Files 
+You can use python to read and write teh contents of files.
+This is particularly useful when you need yo work with a lot of data that is saved in a file.
+For example, in data science and analytics, the data is commonly stored in CSV(comm-separated values) files.
+
+# Opening a file
+Before a file can be edited, it must be opened using the open function.
+The argument of the open function is the path to the file.
+You can specify the mode used to open a file by applying a second argument to the open function.
+"r"- default mode, means open in read mode.
+"w"- means write mode for editing and rewriting the contents of a file.
+"a"- mean append mode for adding new content to the end of the file.
+"b"- means to open a file in binary mode, which is used for non-text files(such as images and sound files)
+Once a file has been opened and used, you should close it. This is done with the close method of the file object.
+
+# Reading a file
+A file opened in text mode can be read using the read method.
+To read only a certain amount of a file, you can provide the number of bytes to read as an argument to the read function.
+Each ASCII character is 1 byte.
+
+# Retrieving lines in a file
+To retrieve each line in a file, you can use the readlines() method to return a list in which element is a line in the file.
+
+# Writing Files
+To write to files you use the write method.
+If you want to add content to an existing file, you can open it using the "a" mode, which stands for append.
+The write method returns the number of bytes written to a file, if successful.

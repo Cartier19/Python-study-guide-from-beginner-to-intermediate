@@ -1,0 +1,150 @@
+### PHASE 1
+This phase looks at introduction to python and getting to know and understand the basics.
+
+
+Python is a case-sensitive language
+Print command is to be followed by Parentheses.
+Text message is to be enclosed in quotes, numbers don't need quotes
+
+Operating with numerical data in Python allows you to perform calculations, automate formulas and solve numerical problems like optimizing routes for autonomous drone optimization.
+
+## NUMERICAL DATA TYPES
+Integer: Any whole number without a decimal point, either positive or negative.
+Float: Any number with a decimal point, either positive or negative.
+
+Errors in codes are known as BUGS. Debugging is the process of finding and fixing bugs in code.
+Lines of codes are called statements
+
+## STRING DATA TYPES
+A piece of text data is called a string. Strings are enclosed within quotes.
+Arithmetic operators can also be applied to Strings i.e you can join two or more strings together using concatenation
+
+## OUTPUT SEPARATORS
+When printing multiple outputs, you can customize the separator using the 'sep' parameter.
+
+## Taking user input
+The input() command asks the user for input and returns what they enter as a string. Even if a number is entered as input, it is processed as a string.
+To convert input from a string to an integer, use the int() function
+To convert input from a string to an float, use the float() function
+Sometimes, there is a need to use a number in a string concatenation, we do that using the str() function, which converts a number to a string.
+
+## In-Place Operators
+In-place operators let you write code like 'x=x+3' more concisely as 'x += 3'.
+You can also use in-place operators for string concatenation
+
+## Control flow
+Booleans: They can have two values, which are: True & False. We can create Booleans by comparing values, by using the equal operator ==.
+Comparison Operators:
+- equal to ==
+- not equal to !==
+- greater than >
+- lesser than <
+- greater or equal to >=
+- lesser than or equal to <=
+
+if statements: used to run code against a certain condition say, if the Boolean evaluates to True.
+Note: 
+-Python uses indentation(that empty space at the beginning of a line) to delimit blocks of code. The statements in the if should be indented. 
+-The colon at the end of the expression in the if statement is important, don't leave it out.
+- if statements can be nested
+
+else statements: used to run some statements when the condition of the if statement is False.
+Note:
+- The code inside the block needs to be indented.
+- The colon after the keyword is important.
+- Every if condition block can have only one else statement. So to make multiple checks, we need to chain if and else statements.
+- Too many if/else statements make your code long and hard to read. Best way to solve this is to use elif statements.
+
+elif statements: This is short for (else if). It's a shortcut to use when chaining together if and else statements.
+Note:
+- A series of if elif statements can have a final else block, which is called if none of the if or elif expressions is True.
+
+Boolean Logic: some operators allow us to combine multiple conditions.
+and: It is True if both conditions evaluate to True
+or: It is True if either or both of the conditions are True & False if both conditions are False.
+not: It takes only one argument and inverts it.
+Besides values, you can also compare variables to form conditions. You can chain multiple conditional statements using the Boolean operators.
+
+Loops: loops allow you to repeat a line of code multiple times
+The code in the body of a while loop is executed repeatedly while the condition is True. This is called iteration.
+You can also use if statements in loops. It is especially useful in things like games, where you might need to loop through a number of player actions and add or remove points from the player's score.
+To end a while loop prematurely, we can use the break statement.
+The continue statement jumps back to the top of the loop rather than stopping it. Basically, the continue statement stops the current iteration and continues with the next one.
+
+## Lists
+Lists are used to store items. We can create lists by using square brackets with commas separating items.
+To access a certain item in a list, use its index in square brackets.
+Nested lists can be used to represent 2D grids such as matrices. Strings can also be indexed like lists.
+Space(" ") is also a symbol and has an index.
+Items at certain index in a list can be reassigned.
+Lists and strings share a lot of similarities- you ca basically think of strings as lists of characters that can't be changed.
+Lists can also be added the same way strings can be added. Lists can also be multiplied by an Integer.
+To check if an item is in a particular list, we use the in operator. It returns True if the item occurs one or more times in the list and False if it doesn't.
+The in operator is also used to determine whether or not a string is a substring of another string.
+To check if an item is not in a list, you can use the not operator in any one of the four ways on the 'Miscellanous.py'
+
+
+## for Loops
+The for loop is used to iterate over a given sequence, such as lists or strings.
+The for loop defines a variable that takes the value of the current item on the list of each iteration.
+A for loop can be used to iterate over strings.
+
+### for loop VS while loop
+The for loop is used when the number of iterations is fixed, while the while loop is used when the number of iterations isn't known and depends on some calculations and conditions in the code block of the loop.
+The for loop has a cleaner and shorter syntax making it a better choice in most cases.
+
+## Ranges
+Python makes it easy to create number sequences using the range function. By default, it starts from 0, increments by 1 and stops before the specified number.
+To ouput range as a list, you need to convert it to a list, using the list() function.
+If range is called with one argument, it'll produce an object with values from 0 to that argument
+If it is called with two arguments, it'll produce values from the first to the second.
+There's a third argument you can use with range() and it's really useful. It's called Step and it determines the interval of the sequence produced.
+To go backward, you use a negative number as the third argument. You can use ranges in for loops, without having to convert them into lists.
+
+## List slices 
+List slices allow you to get a part of the list using two colon-separated indices. This returns a new list containing all the values between the indices.
+If the first number is omitted, it's taken to be the start of the list.
+If the second number is omitted, it's taken to be the end of the list.
+Just like with ranges, your list slice can include a third number, representing the step, to include only alternate values in the slice.
+
+## Functions
+A function is a group of related statements that performs a specific task. Functions help break down our program into smaller and modular chunks.
+It avoids repitition and makes the code reusable. A function has a name and can have an argument, it can have multiple arguments.
+Function arguments need to be separated by commas. You call a function by using its name, followed by parentheses, which enclose the arguments.
+# List Functions
+- len(): lets you get the number of items in a list. You can also use len on strings to return their length(character count).
+- append(): It is used to add an item to the end of the list. The function is called using the list name followed by a dot.
+- insert(): inserts a new item at the given position in the list. The first argument is the position index, while the second parameter is the item to insert at that position
+- index(): finds the first occurence of a list item and returns its index.
+- max(list): returns the max value
+- min(list): returns the min value
+- list.count(item): returns a count of how many times an items occur in a list 
+- list.remove(item): removes an item from the list.
+- list.reverse(): reverses items in the list.
+
+# String Functions
+- format(): allows values to be embedded in it using placeholders. Each argument of the format function is placed in the string at the corresponding position, which is determined using the curly braces{}. You can also name the placeholders, instead of the index numbers
+- join(): joins a list of strings with another string as a separator
+- split(): it turns a string with a certain separator into a list
+- replace(): replaces one substring in a string with another one
+- lower() & upper(): change the case of a string to lowercase or uppercase
+
+# Creating your own functions
+You can create your own functions by using the def statement. The code block within every function starts with a colon and is indented.
+Once you've defined a function, you can call it multiple times in your code. The function needs to be defined before calling it to avoid error.
+
+# Function arguments
+Functions can take arguments, which can be used to generate the function output.
+You can call the same function with different arguments. You can define function with more than one argument: separate them with commas.
+Arguments can be used as variables inside the function. You can have different statements in your functions, working with the argument variables, such as if statements and loops.
+Once you return a value from a function, it immediately stops being executed. A function can only return once, thus if you need to return multiple values, use a list.
+
+## Comments
+They are annotations used to make it easier to understand. They don't affect how the code is run.
+In python, a comment is created by inserting an octothorpe(#) symbol. All text after it on that line is ignored.
+You can have multiple comments in your code
+
+## Docstrings
+Short for documentation strings. They are similar to comments, in that they're designed to explain code but they're more specific and have a different syntax.
+They're created by putting a multiline string containing an explanation of the function below the function's first line.
+Docstrings act as documentation for other developers who use your function.
